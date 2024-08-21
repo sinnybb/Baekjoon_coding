@@ -8,4 +8,7 @@ for i in range(length):
   if message[i] in alphabets :
     summation += (alphabets.index(message[i]) + 1) * (31 ** i)
 
-print(summation)
+if summation < 1234567891 :
+    print(summation)
+else :
+    print(summation % 1234567891)
