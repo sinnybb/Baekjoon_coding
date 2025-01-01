@@ -1,5 +1,4 @@
-import math
-import sys
+import math, sys
 
 m, n = map(int, sys.stdin.readline().split())
 prime = [True] * (n + 1)  
@@ -10,6 +9,4 @@ for i in range(2, int(math.sqrt(n)) + 1):
         for j in range(i * i, n + 1, i):
             prime[j] = False
 
-for i in range(m, n + 1):
-    if prime[i]:
-        print(i)
+result = [print(i) for i in range(m, n + 1) if prime[i]]
